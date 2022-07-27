@@ -323,7 +323,7 @@ var we_tabs_next_button = '[bloc=next-question]';
           tabList[we_indexOfNextTab] = nextTab;
         } else {
           tabList.push(nextTab);
-        }
+        
         $(we_tabs_next_button).addClass(we_tabs_active_class);
         $(".w--tab-active").attr('next-tab',nextTab);
         $($('[data-w-tab=summary]')).attr('prev-tab',we_activeTab);
@@ -341,13 +341,13 @@ var we_tabs_next_button = '[bloc=next-question]';
 // ----------- calculator section under
     
     
-var pages, budget;
+    var pages, budget;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
       if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 12500;
+    $('[bloc=budget]').text('12 500');
   }
 });
 
@@ -355,9 +355,12 @@ $("[name=pages]").on("input", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
         if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 12500;
+    $('[bloc=budget]').text('12 500');
   }
 });
+
+budget;
+
 
 
 </script>
