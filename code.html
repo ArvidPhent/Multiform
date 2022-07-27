@@ -339,8 +339,7 @@ var we_tabs_next_button = '[bloc=next-question]';
       }});
     
 // ----------- calculator section under
-    
-var pages, animations, budget;
+    var pages, animations, budget;
 
 
 $("[name=pages]").on("input", function () {
@@ -365,6 +364,7 @@ $("[name=pages]").on("input", function () {
     budget = (typeof budget == 'number' ? budget : 0) + 40000;
   }
 });
+    $('[bloc=budget]').text(budget);
 
 $("[name=animations]").on("input", function () {
     animations = getValueFromInput("animations");
@@ -388,6 +388,7 @@ $("[name=animations]").on("input", function () {
     budget = (typeof budget == 'number' ? budget : 0) + 10000;
   }
 });
+    $('[bloc=budget]').text(budget);
 
 
 </script>
