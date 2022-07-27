@@ -340,20 +340,19 @@ var we_tabs_next_button = '[bloc=next-question]';
     
 // ----------- calculator section under
     
-    var pages;
+var pages;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
-      $('[bloc=budget]').text('1500');
+      $('[bloc=budget]').text('så mycket pengar du har');
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
-        $('[bloc=budget]').text('1500');
+        $('[bloc=budget]').text('så mycket pengar du har');
 });
-
 
 
 </script>
