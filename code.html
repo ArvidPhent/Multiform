@@ -341,18 +341,22 @@ var we_tabs_next_button = '[bloc=next-question]';
 // ----------- calculator section under
     
     
-var pages;
+var pages, budget;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
-      $('[bloc=budget]').text(pages);
+      if (pages == 1) {
+    budget = (typeof budget == 'number' ? budget : 0) + 12500;
+  }
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
-        $('[bloc=budget]').text(pages);
+        if (pages == 1) {
+    budget = (typeof budget == 'number' ? budget : 0) + 12500;
+  }
 });
 
 
