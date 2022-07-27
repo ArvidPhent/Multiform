@@ -339,7 +339,7 @@ var we_tabs_next_button = '[bloc=next-question]';
   
 // -------------- Calculator code starts here
   
-  var pages, budget;
+var pages, budget;
 
 
 $("[name=pages]").on("input", function () {
@@ -351,6 +351,7 @@ $("[name=pages]").on("input", function () {
   } else if (pages == 3) {
     budget = (typeof budget == 'number' ? budget : 0) + 25000;
   }
+  $('[bloc=budget]').text(budget);
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
@@ -363,7 +364,9 @@ $("[name=pages]").on("input", function () {
   } else if (pages == 3) {
     budget = (typeof budget == 'number' ? budget : 0) + 25000;
   }
+  $('[bloc=budget]').text(budget);
 });
+
 
 
 
