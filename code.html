@@ -339,19 +339,26 @@ var we_tabs_next_button = '[bloc=next-question]';
   
 // -------------- Calculator code starts here
   
-  var pages;
+  var pages, budget;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
-      $('[bloc=budget]').text(pages);
+      if (pages == 1) {
+    budget = (typeof budget == 'number' ? budget : 0) + 125000;
+  }
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
-        $('[bloc=budget]').text(pages);
+        if (pages == 1) {
+    budget = (typeof budget == 'number' ? budget : 0) + 125000;
+  }
 });
+
+budget;
+
 
 
 </script>
