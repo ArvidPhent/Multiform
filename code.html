@@ -338,19 +338,24 @@ var we_tabs_next_button = '[bloc=next-question]';
 
       }});
     
+// ----------- calculator section under
+    
     var pages;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
-      $('[bloc=budget]').text('pages');
+      $('[bloc=budget]').text('Text');
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
-        $('[bloc=budget]').text('pages');
+        $('[bloc=budget]').text('Text');
 });
+
+    
+    
 
 
 </script>
