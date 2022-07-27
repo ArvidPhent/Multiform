@@ -343,30 +343,9 @@ var pages, budget;
 
 
 $("[name=pages]").on("input", function () {
-    pages = getValueFromInput("pages");
-      if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 12500;
-  } else if (pages == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 16500;
-  } else if (pages == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 25000;
-  }
-  $('[bloc=budget]').text(budget);
+pages = getValueFromInput("pages");
+$('[bloc=budget]').text(pages);
 });
-
-    $("[name=pages]").parent("label.w-radio").on("click", function () {
-      clickedRadioButtonValue = $("input", this).val();
-      pages = getValueFromInput("pages");
-        if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 12500;
-  } else if (pages == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 16500;
-  } else if (pages == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 25000;
-  }
-  $('[bloc=budget]').text(budget);
-});
-
 
 
 
