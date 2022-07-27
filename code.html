@@ -341,53 +341,18 @@ var we_tabs_next_button = '[bloc=next-question]';
 // ----------- calculator section under
     
     
- var pages, animations, budget;
+var pages;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
-      if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 12500;
-  } else if (pages == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 20000;
-  } else if (pages == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 40000;
-  }
+      $('[bloc=budget]').text(pages);
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
-        if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 12500;
-  } else if (pages == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 20000;
-  } else if (pages == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 40000;
-  }
-});
-
-$("[name=animations]").on("input", function () {
-    animations = getValueFromInput("animations");
-      if (animations == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 2500;
-  } else if (animations == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 5000;
-  } else if (animations == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 10000;
-  }
-});
-
-    $("[name=animations]").parent("label.w-radio").on("click", function () {
-      clickedRadioButtonValue = $("input", this).val();
-      animations = getValueFromInput("animations");
-        if (animations == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 2500;
-  } else if (animations == 2) {
-    budget = (typeof budget == 'number' ? budget : 0) + 5000;
-  } else if (animations == 3) {
-    budget = (typeof budget == 'number' ? budget : 0) + 10000;
-  }
+        $('[bloc=budget]').text(pages);
 });
 
 
