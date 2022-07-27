@@ -336,5 +336,22 @@ var we_tabs_next_button = '[bloc=next-question]';
     });
 
       }});
+  
+// -------------- Calculator code starts here
+  
+  var pages;
+
+
+$("[name=pages]").on("input", function () {
+    pages = getValueFromInput("pages");
+      $('[bloc=budget]').text(pages);
+});
+
+    $("[name=pages]").parent("label.w-radio").on("click", function () {
+      clickedRadioButtonValue = $("input", this).val();
+      pages = getValueFromInput("pages");
+        $('[bloc=budget]').text(pages);
+});
+
 
 </script>
