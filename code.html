@@ -345,7 +345,11 @@ var we_tabs_next_button = '[bloc=next-question]';
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
       if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 125000;
+    budget = (typeof budget == 'number' ? budget : 0) + 12500;
+  } else if (pages == 2) {
+    budget = (typeof budget == 'number' ? budget : 0) + 16500;
+  } else if (pages == 3) {
+    budget = (typeof budget == 'number' ? budget : 0) + 25000;
   }
 });
 
@@ -353,11 +357,14 @@ $("[name=pages]").on("input", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
         if (pages == 1) {
-    budget = (typeof budget == 'number' ? budget : 0) + 125000;
+    budget = (typeof budget == 'number' ? budget : 0) + 12500;
+  } else if (pages == 2) {
+    budget = (typeof budget == 'number' ? budget : 0) + 16500;
+  } else if (pages == 3) {
+    budget = (typeof budget == 'number' ? budget : 0) + 25000;
   }
 });
 
-budget;
 
 
 
