@@ -340,31 +340,31 @@ var we_tabs_next_button = '[bloc=next-question]';
     
 // ----------- calculator section under
     
-var pages, budget, animations;
+var pages;
 
 
 $("[name=pages]").on("input", function () {
     pages = getValueFromInput("pages");
-      $('[bloc=budget]').text(pages);
+      if (pages == 1) {
+    $('[bloc=budget]').text('12 500');
+  } else if (pages == 2) {
+    $('[bloc=budget]').text('20 000');
+  } else if (pages == 3) {
+    $('[bloc=budget]').text('40 000 +');
+  }
 });
 
     $("[name=pages]").parent("label.w-radio").on("click", function () {
       clickedRadioButtonValue = $("input", this).val();
       pages = getValueFromInput("pages");
-        $('[bloc=budget]').text(pages);
+        if (pages == 1) {
+    $('[bloc=budget]').text('12 500');
+  } else if (pages == 2) {
+    $('[bloc=budget]').text('20 000');
+  } else if (pages == 3) {
+    $('[bloc=budget]').text('40 000 +');
+  }
 });
-    budget = (typeof budget == 'number' ? budget : 0) + pages;
-$("[name=animations]").on("input", function () {
-    animations = getValueFromInput("animations");
-      $('[bloc=budget]').text(animations);
-});
-
-    $("[name=animations]").parent("label.w-radio").on("click", function () {
-      clickedRadioButtonValue = $("input", this).val();
-      animations = getValueFromInput("animations");
-        $('[bloc=budget]').text(animations);
-});
-    budget = (typeof budget == 'number' ? budget : 0) + pages;
 
 
 </script>
