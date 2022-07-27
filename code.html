@@ -340,7 +340,7 @@ var we_tabs_next_button = '[bloc=next-question]';
     
 // ----------- calculator section under
     
-var pages;
+var pages, animations;
 
 
 $("[name=pages]").on("input", function () {
@@ -362,6 +362,29 @@ $("[name=pages]").on("input", function () {
   } else if (pages == 2) {
     $('[bloc=budget]').text('20 000');
   } else if (pages == 3) {
+    $('[bloc=budget]').text('40 000 +');
+  }
+});
+
+$("[name=animations]").on("input", function () {
+    animations = getValueFromInput("animations");
+      if (animations == 1) {
+    $('[bloc=budget]').text('12 500');
+  } else if (animations == 2) {
+    $('[bloc=budget]').text('20 000');
+  } else if (animations == 3) {
+    $('[bloc=budget]').text('40 000 +');
+  }
+});
+
+    $("[name=animations]").parent("label.w-radio").on("click", function () {
+      clickedRadioButtonValue = $("input", this).val();
+      animations = getValueFromInput("animations");
+        if (animations == 1) {
+    $('[bloc=budget]').text('12 500');
+  } else if (animations == 2) {
+    $('[bloc=budget]').text('20 000');
+  } else if (animations == 3) {
     $('[bloc=budget]').text('40 000 +');
   }
 });
